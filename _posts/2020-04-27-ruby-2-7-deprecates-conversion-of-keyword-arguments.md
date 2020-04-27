@@ -3,32 +3,34 @@ layout: post
 title: Ruby 2.7 deprecates conversion of keyword arguments
 meta_description: Ruby 2.7 deprecates conversion of keyword arguments and positional arguments
 author: john_doe
-date: 2020-04-26 22:36:17
+date: 2020-04-26T22:36:17.000Z
 intro_paragraph: A notable change has been announced for Ruby 3 for which
   deprecation warning has been added in Ruby 2.7. Ruby 2.7 deprecated automatic
   conversion of keyword arguments and positional arguments. This conversion will
   be completely removed in Ruby 3.
 ---
-[Ruby 2.7 NEWS](https://github.com/ruby/ruby/blob/4643bf5d55af6f79266dd67b69bb6eb4ff82029a/doc/NEWS-2.7.0#the-spec-of-keyword-arguments-is-changed-towards-30-)has listed the spec of keyword arguments for Ruby 3.0. We will take the examples mentioned there and for each scenario we will look into how we can fix them in the existing codebase.
+# [Ruby 2.7 NEWS](https://github.com/ruby/ruby/blob/4643bf5d55af6f79266dd67b69bb6eb4ff82029a/doc/NEWS-2.7.0#the-spec-of-keyword-arguments-is-changed-towards-30-)has listed the spec of keyword arguments for Ruby 3.0. We will take the examples mentioned there and for each scenario we will look into how we can fix them in the existing codebase.\
+\
+`kjhdkjfsjkdbfjsdbfksjdbfkjsdbfjkdsbf`
 
 #### Scenario 1
 
 *When method definition accepts keyword arguments as the last argument.*
 
 ```ruby
-
+kjbkjbsdk sdfsdfdfssd
 ```
 
 Passing exact keyword arguments in a method call is acceptable, but in applications we usually pass a hash to a method call.
 
 ```ruby
-
+sdfsdf
 ```
 
 In this case, we can add a double splat operator to the hash to avoid deprecation warning.
 
 ```ruby
-
+sdfsdf
 ```
 
 #### Scenario 2
@@ -38,17 +40,17 @@ In this case, we can add a double splat operator to the hash to avoid deprecatio
 If the number of positional arguments doesn’t match with method definition, then keyword arguments passed in method call will be considered as the last positional argument to the method.
 
 ```ruby
-
+sdfsdfsd
 ```
 
 ```ruby
-
+sdfsdf
 ```
 
 To avoid deprecation warning and for code to be compatible with Ruby 3, we should pass hash instead of keyword arguments in method call.
 
 ```ruby
-
+sdfsdf
 ```
 
 #### Scenario 3
@@ -58,17 +60,17 @@ To avoid deprecation warning and for code to be compatible with Ruby 3, we shoul
 If a method arguments are a mix of symbol keys and non-symbol keys, and the method definition accepts either one of them then Ruby splits the keyword arguments but also raises a warning.
 
 ```ruby
-
+sdfsdf
 ```
 
 ```ruby
-
+sdfsdfsdf
 ```
 
 To fix this warning, we should pass hash separately as defined in the method definition.
 
 ```ruby
-
+sdfsdfsdfsd
 ```
 
 #### Scenario 4
@@ -78,17 +80,17 @@ To fix this warning, we should pass hash separately as defined in the method def
 Passing keyword arguments using double splat operator to a method that doesn’t accept keyword argument will send empty hash similar to earlier version of Ruby but will raise a warning.
 
 ```ruby
-
+dsfsdfsdf
 ```
 
 ```ruby
-
+sdfsdf
 ```
 
 To avoid this warning, we should change method call to pass hash instead of using double splat operator.
 
 ```ruby
-
+sdfsdfdsf
 ```
 
 - - -
@@ -98,19 +100,19 @@ To avoid this warning, we should change method call to pass hash instead of usin
 In Ruby 2.6.0, support for non-symbol keys in method call was removed. It is added back in Ruby 2.7. When method accepts arbitrary keyword arguments using double splat operator then non-symbol keys can also be passed.
 
 ```ruby
-
+sdfsdf
 ```
 
 ##### ruby 2.6.5
 
 ```ruby
-
+dsfsdfsd
 ```
 
 ##### ruby 2.7.0
 
 ```ruby
-
+sdfsdfsdfsdf
 ```
 
 - - -
@@ -120,7 +122,7 @@ In Ruby 2.6.0, support for non-symbol keys in method call was removed. It is add
 Ruby 2.7 added support for`**nil`to explicitly mention if a method doesn’t accept any keyword arguments in method call.
 
 ```ruby
-
+sdfsdfsd
 ```
 
 - - -
