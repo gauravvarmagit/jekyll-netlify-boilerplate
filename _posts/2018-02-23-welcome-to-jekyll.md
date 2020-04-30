@@ -5,6 +5,7 @@ meta_description: A description may also be set in a post. You can find more
   information about it in pages/about.md.
 author: dan_urbanowicz
 date: 2018-07-03T12:00:00.000Z
+intro_paragraph: "![](/assets/img/uploads/screenshot-editor.jpg)"
 categories: rails ruby js
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve`, which launches a web server and auto-regenerates your site when a file is updated.
